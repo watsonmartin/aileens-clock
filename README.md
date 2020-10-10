@@ -23,7 +23,7 @@ Make sure you run it in its own window since we will be using a window capture t
 2. Add a window capture of the clock in OBS
 
 To add a window capture, click the plus button in the sources section near the bottom left of your screen.
-![Image of sources window of OBS](image/instruction/obs_2.JPG)
+![Image of sources window of OBS](image/instructions/obs_2.JPG)
 
 Choose window capture from the list that pops up
 ![Image of source option list](image/instructions/obs_3.JPG)
