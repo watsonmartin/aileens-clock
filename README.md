@@ -16,9 +16,33 @@ There are two main aspects of getting this clock to work for you. Running the cl
 ### Installing and Running the Clock
 In order to run the clock follow the below steps.
 
-1. clone (download) this github repository.
-2. navigate to the place where the repository is on your local machine and open up the file "index.html". You may do this with any browser of your choice.
-3. Enjoy your clock!
+#### Cloning the repository with github desktop
+ 
+First, download github desktop. This can be done by following [this link](https://desktop.github.com/)
+
+Once you have Github Desktop installed, open it up. 
+In the top left click on "Current repository". 
+
+![current repository button in Github Desktop](image/instructions/cloningRepo_1.JPG)
+
+In the menu that pops up, click "Add" followed by "clone repository" 
+
+![current repository button in Github Desktop](image/instructions/cloningRepo_2.JPG)
+
+In the dialog box that pops up, navigate to the URL tab
+
+![current repository button in Github Desktop](image/instructions/cloningRepo_3.JPG)
+
+Choose local path where you would like to place the clock and copy paste the url ```https://github.com/watsonmartin/aileens-clock.git``` into the url field. 
+Once you've filled out these fields, click clone. 
+
+Stick to the master branch because it will have stable releases on it. Work in progress will be on other branches. 
+Whenever there are updates, you can download them by clicking "Pull origin" in the control bar at the top of Github Desktop. 
+
+#### Running the clock
+
+Navigate to the place where the repository is on your local machine and open up the file ```index.html```. You may do this with any browser of your choice.
+You should also open up ```controller.html``` in a different window. This will provide you with controls for your clock. 
 
 
 ### Displaying the clock in OBS.
