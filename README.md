@@ -3,13 +3,15 @@
 
  ## Contents
 
- - [How to Use](#how-to-use)
- - [Installing and Running](#installing-and-running-the-clock)
- - [Displaying the Clock in OBS](#displaying-the-clock-in-obs)
- - [Configuring OBS Capture](#making-adjustments-to-our-capture)
- - [Changing the Background](#changing-the-background-image)
+ - [Set up and Configuration](#set-up-and-configuration)
+    - [Installing and Running](#installing-and-running-the-clock)
+    - [Displaying the Clock in OBS](#displaying-the-clock-in-obs)
+    - [Configuring OBS Capture](#making-adjustments-to-our-capture)
+ - [Using the clock](#using-the-clock)
+    - [Changing the Background](#changing-the-background-image)
+    - [Clock Controller](#clock-controller)
 
-## <a id="how-to-use"></a> How to use
+## Set-up and Configuration
 
 There are two main aspects of getting this clock to work for you. Running the clock, and displaying it in OBS.
 
@@ -45,6 +47,7 @@ Navigate to the place where the repository is on your local machine and open up 
 You should also open up ```controller.html``` in a different window. This will provide you with controls for your clock. 
 
 
+
 ### Displaying the clock in OBS.
 
 #### 1. Be sure that your clock is running in your browser of choice. 
@@ -67,11 +70,14 @@ Choose window capture from the list that pops up
 
 This will open up a dialog box for creating a new capture. Name your capture something relevant like "Realtime Clock Capture" and click OK.
 
+
 ![New capture name dialog](image/instructions/obs_4.JPG)
 
 In the next dialog box, choose the window where your clock is running. You will see the clock display in a preview window.
 
 ![New capture dialog box](image/instructions/obs_5.JPG)
+
+**Note**: Although Chrome is used in this example, **Chrome is currently not supported**. The steps remain the same if using a different browser. 
 
 Set the Window Match Priority to "Window title must match" to ensure that the capture does not pick up some other chrome window. (If you have other tabs open in the window with the clock they may be captured when the clock closes so be careful.)
 
@@ -112,6 +118,10 @@ The resulting window will have controls where you can adjust the cropping of the
 
 And now you've done it! A beautiful clock overlay for your stream. Feel free to play around with other OBS settings like transparancies to further customize to a look that you like. 
 
+[Back to the top](#aileens-clock)
+
+## Using the Clock
+
 ### Changing the background image
 
 #### Step 1- Uploading your image
@@ -137,5 +147,27 @@ This line tells your browser which file to use as the background image. To chang
 Be certain the name is **EXACTLY** the same. It is case sensitive and any error will cause the clock to fail.
 
 After making the change, save the index.html file and head over to your clock. If the changes don't display immediately try refreshing the page. If the page displays nothing there is likely a typo in the filename. Once you have several files uploaded to the image folder, you will be able to switch between them with ease by following only instructions in step 2. Have fun customizing your clock!
+
+### Clock Controller
+Access the clock controller by opening the index.html page. It features a clock view window in which
+you may see your clock as it is being displayed and a control panel. These controls will allow you to interact with the
+pomodoro functionality of the clock. This is done using two buttons.
+
+#### Start Pomodoro
+
+This button will, as the title says, start a pomodoro. This will begin a 25 minute timer from the moment the button is pressed. A coundown will be displayed at the bottom of the clock.
+When no pomodoro is active, it will say "No currently active pomodoro." At the end of 25 minutes, the timer will revert back to saying "No currently active Pomodoro" and
+the number of pomodoros will automatically go up by one. 
+
+#### Reset pomodoro count
+
+This button will, as the title says, reset the pomodoro count. When you are done tracking your pomodoros for the day or for the streaming session, simply click this button.
+If you close the clock, it may be the case that the pomodoro count is retained when reopening, and you will need to reset. However, do not count on the count being maintained, as this
+will depend on the policy of the browser you are using with regards to maintaining cookies. 
+
+#### Deactivate pomodoro counter
+
+If you do not want the pomodoro counter to display, and prefer the simple clock view, simply click this button to deactivate the counter. Once clicked, the button will change to say "Activate pomodoro counter" and can be clicked again to reactivate the pomodoro counter features.
+
 
 [Back to the top](#aileens-clock)
