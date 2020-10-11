@@ -2,22 +2,21 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Realtime Clock</title>
-        <script src="js/clockscript.js"></script>
+        <title>Clock Controller</title>
+        <script src="js/controllerscript.js"></script>
         <noscript>You need to enable JavaScript to view the full site.</noscript>
         <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
     </head>
-    <body onload="realtimeClock()">
+    <body onload="loadPage()">
         <div class="main-container">
-            <div id="clock"></div>
-            <div id=pomodorocounter>
-                <div id="counter"></div>
-                <div id="currentpomodoro"></div>
+            <div class="preview">
+                <h2>Clock view</h2>
+                <iframe class="clockview" src=index.html scrolling="no"></iframe>
             </div>
-            <h1>POMODORO CLOCK</h1>
-            <img class="img-background" src="image/mountains2.jpg">
-
+            <div class="controls">
+                <h2>Controls</h2>
+            </div>
         </div>
     </body>
 </html>
