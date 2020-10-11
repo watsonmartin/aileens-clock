@@ -68,3 +68,26 @@ The resulting window will have controls where you can adjust the cropping of the
 ![My cropped capture](image/instructions/obs_11.JPG)
 
 And now you've done it! A beautifl clock overlay for your stream. Feel free to play around with other OBS settings like transparancies to further customize to a look that you like. 
+
+### Changing the background image
+
+#### Step 1- Uploading your image
+Everyone is a fan of landscape paintings of mountains, but sometimes you might want to swap those mountains for a verdant forest, a stunning desert, or perhaps a fun seasonal background for the holidays. Changing the background for your clock is pretty straightforward, but tread carefully. If done wrong the clock won't show anything at all! 
+
+In order to change the image used as the background, open up the folder where the clock is saved and navigate to the 'image' folder. Within this folder is another folder called 'background'. Place your image of choice into this folder. Give it a name that is easily identifiable as you will have to remember it later!
+
+This is where you background image should go: alongside the default background mountains.jpg. 
+![Folder where new image should be placed](image/instructions/background_1.JPG)
+
+
+#### Step 2- Setting your image as the background image
+Now that your image is available to the clock, you need to make sure the clock knows which image to use. Using a text editor, open up the index.html file. You need to locate the line  ```<img class="img-background" src="image/background/mountains.jpg">```. 
+![index.html with background image line highlighted](image/instructions/background_2.JPG)
+
+This line tells your browser which file to use as the background image. To change the background image, you will point the browser to your new file. Simply replace ```mountains.jpg``` with the name of the image file you uploaded to the image folder in step 1. 
+![replacing image gif](![index.html with background image line highlighted](image/instructions/background_2.JPG))
+
+
+Be certain the name is **exactly** the same. It is case sensitive and any error will cause the clock to fail.
+
+After making the change, save the index.html file and head over to your clock. If the changes don't display immediately try refreshing the page. If the page displays nothing there is likely a typo in the filename. Once you have several files uploaded to the image folder, you will be able to switch between them with ease by following only instructions in step 2.Have fun customizing your clock!
