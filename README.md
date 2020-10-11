@@ -1,7 +1,15 @@
 # aileens-clock
  A simple javascript timer to be used as an overlay for streaming
 
-## How to use
+ ## Contents
+
+ - [How to Use](#how-to-use)
+ - [Installing and Running](#installing-and-running-the-clock)
+ - [Displaying the Clock in OBS](#displaying-the-clock-in-obs)
+ - [Configuring OBS Capture](#making-adjustments-to-our-capture)
+ - [Changing the Background](#changing-the-background-image)
+
+## <a id="how-to-use"></a> How to use
 
 There are two main aspects of getting this clock to work for you. Running the clock, and displaying it in OBS.
 
