@@ -29,7 +29,7 @@ To add a window capture, click the plus button in the sources section near the b
 
 Choose window capture from the list that pops up
 
-![Image of source option list](image/instructions/obs_3.JPG)
+![Image of source option list](image/instructions/obs_3.jpg)
 
 #### 3. Configure your clock capture
 
