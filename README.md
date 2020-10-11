@@ -142,4 +142,9 @@ This button will, as the title says, reset the pomodoro count. When you are done
 If you close the clock, it may be the case that the pomodoro count is retained when reopening, and you will need to reset. However, do not count on the count being maintained, as this
 will depend on the policy of the browser you are using with regards to maintaining cookies. 
 
+#### Deactivate pomodoro counter
+
+If you do not want the pomodoro counter to display, and prefer the simple clock view, simply click this button to deactivate the counter. Once clicked, the button will change to say "Activate pomodoro counter" and can be clicked again to reactivate the pomodoro counter features.
+
+
 [Back to the top](#aileens-clock)

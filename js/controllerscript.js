@@ -1,5 +1,6 @@
 function loadPage(){ 
 
+
     var controls = document.getElementsByClassName("controls")[0];
 
      var resetPomodoroCountButton = document.createElement("button"); 
@@ -17,6 +18,15 @@ function loadPage(){
 
      startPomodoroButton.addEventListener("click", function() { 
              startPomodoro(); 
+     })
+
+     var toggleCounterButton = document.createElement("button"); 
+     toggleCounterButton.id = "togglebutton"; 
+     toggleCounterButton.innerHTML = getToggleCounterText(); 
+     controls.appendChild(toggleCounterButton); 
+
+     toggleCounterButton.addEventListener("click", function() { 
+             toggleCounter();  
      })
 }
 
@@ -56,9 +66,37 @@ function setCurrentPomdoroCounted(counted){
     document.cookie = "curpomodoro_counted=" + counted;
 }
 
+function setCounterActive(active){
+    document.cookie = "pomodoro_counter_active=" + active + "; SameSite=Lax"; 
+}
+
 function startPomodoro(){
     var now = new Date().getTime(); 
     var pomodoroEnd = new Date(now+(25*60*1000));
     setPomodoroEnd(pomodoroEnd);
     setCurrentPomdoroCounted(false);  
+}
+
+function counterActive(){
+    if(cookieSet("pomodoro_counter_active")){
+        return getCookie("pomodoro_counter_active") == "true"; 
+    }
+    return true; 
+}
+
+function getToggleCounterText(){
+    if(counterActive()){
+        return "Deactivate pomodoro counter";
+    }
+    return "Activate pomodoro counter"; 
+}
+
+function toggleCounter(){
+    if(counterActive()){
+        setCounterActive("false");
+        document.getElementById("togglebutton").innerHTML = getToggleCounterText(); 
+    } else {
+        setCounterActive("true"); 
+        document.getElementById("togglebutton").innerHTML = getToggleCounterText(); 
+    }
 }
