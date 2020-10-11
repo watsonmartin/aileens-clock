@@ -113,3 +113,5 @@ This line tells your browser which file to use as the background image. To chang
 Be certain the name is **EXACTLY** the same. It is case sensitive and any error will cause the clock to fail.
 
 After making the change, save the index.html file and head over to your clock. If the changes don't display immediately try refreshing the page. If the page displays nothing there is likely a typo in the filename. Once you have several files uploaded to the image folder, you will be able to switch between them with ease by following only instructions in step 2. Have fun customizing your clock!
+
+[Back to the top](#aileens-clock)
