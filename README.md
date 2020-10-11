@@ -9,7 +9,7 @@ There are two main aspects of getting this clock to work for you. Running the cl
 In order to run the clock follow the below steps.
 
 1. clone (download) this github repository.
-2. navigate to the place where the repository is on your local machine and open up the file "index.html". You may do this with any browser of your choice.
+2. navigate to the place where the repository is on your local machine and open up the file "index.html" in a browser. Firefox is the recommended browser. **Chrome is not supported** without further configuration steps. Instructions on how to configure chrome will come in a future update.
 3. Enjoy your clock!
 
 
@@ -30,13 +30,16 @@ Choose window capture from the list that pops up
 
 3. Configure your clock capture
 
+**Note**: Although Chrome is used in this example, **Chrome is currently not supported**. The steps remain the same if using a different browser. 
+
 This will open up a dialog box for creating a new capture. Name your capture something relevant like "Realtime Clock Capture" and click OK.
 ![New capture name dialog](image/instructions/obs_4.JPG)
 
 In the next dialog box, choose the window where your clock is running. You will see the clock display in a preview window. 
 ![New capture dialog box](image/instructions/obs_5.JPG)
 
-Set the Window Match Priority to "Window title must match" to ensure that the capture does not pick up some other chrome window. (If you have other tabs open in the window with the clock they may be captured when the clock closes so be careful.)
+
+Set the Window Match Priority to "Window title must match" to ensure that the capture does not pick up some other browser window. (If you have other tabs open in the window with the clock they may be captured when the clock closes so be careful.)
 
 It is recommended to uncheck Capture Cursor, since you generally won't want the cursor to appear on the clock. After choosing those options, the settings menu will appear as follows:
 ![Capture settins filled out](image/instructions/obs_6.JPG)
