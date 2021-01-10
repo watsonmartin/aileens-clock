@@ -3,7 +3,8 @@ function realtimeClock(){
     var t = setTimeout(realtimeClock, 500);
 
     displayClock(); 
-    displayPomodoroCounter(); 
+    displayPomodoroCounter();
+    playAlarm();
 }
 
 function getCookie(cname) {
@@ -37,6 +38,7 @@ function incrementPomodoroCount(){
     } else {
         document.cookie = "pomodoro_count=1"; 
     }
+    activateAlarm(); 
 }
 
 function displayPomodoroCounter(){
@@ -104,4 +106,18 @@ function counterActive(){
         return getCookie("pomodoro_counter_active") == "true";
     }
     return false; 
+}
+
+function activateAlarm(){
+    document.cookie = "alarm=active"; 
+}
+
+function playAlarm(){
+    
+    if(cookieSet("alarm")){
+        if(getCookie("alarm") == "active"){
+            var alarmAudio = document.getElementById("alarm-audio");
+            alarmAudio.play(); 
+        }
+    }
 }

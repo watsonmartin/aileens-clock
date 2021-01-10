@@ -35,6 +35,11 @@ function loadPage(){
      setPomodoroLengthButton.addEventListener("click", function() {
          setPomodoroLength();
      })
+
+     var stopAlarmButton = document.getElementById("stopAlarmButton");
+     stopAlarmButton.addEventListener("click", function(){
+         stopAlarm();
+     })
 }
 
 function getCookie(cname) {
@@ -118,5 +123,11 @@ function setPomodoroLength(){
     }
     if(isNaN(pom_minutes)){
         pom_minutes
+    }
+}
+
+function stopAlarm(){
+    if(cookieSet("alarm")){
+        document.cookie = "alarm=inactive"; 
     }
 }
