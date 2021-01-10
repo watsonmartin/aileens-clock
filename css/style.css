@@ -96,3 +96,25 @@ button {
 button:hover {
     background: lightgrey; 
 }
+
+.controlrow h3 {
+    margin-left: 40px;
+}
+
+.controlrow .labeledEntryField {
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: 50px;
+    line-height: 60px;
+}
+
+.controlrow {
+    content: "";
+    clear: left;
+    display: table;
+}
+
+h2 {
+    margin-left: 15px;
+}

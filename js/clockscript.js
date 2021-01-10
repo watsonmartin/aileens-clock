@@ -3,12 +3,7 @@ function realtimeClock(){
     var t = setTimeout(realtimeClock, 500);
 
     displayClock(); 
-    if(counterActive()){
-        document.getElementById("pomodorocounter").hidden = false; 
-        displayPomodoroCounter(); 
-    } else {
-        document.getElementById("pomodorocounter").hidden = true; 
-    }
+    displayPomodoroCounter(); 
 }
 
 function getCookie(cname) {
@@ -63,7 +58,7 @@ function displayPomodoroCounter(){
                 document.cookie = "curpomodoro_counted=true"; 
             }
             document.getElementById('currentpomodoro').innerHTML = 
-            "No currently active Pomodoro."
+            "On break!"
         } else {
             var pomodoroMinutes = Math.floor(distance  / (1000 * 60)); 
             var pomodoroSeconds = ("0" + Math.floor((distance % (1000 * 60)) / 1000)).slice(-2); 
@@ -72,11 +67,17 @@ function displayPomodoroCounter(){
         }
 
     } else {
-        
+        document.getElementById('currentpomodoro').innerHTML = 
+        "On break!"
     }
 
     document.getElementById('counter').innerHTML =
         "Number of pomodoros: " + pomodoro_count;
+    if(!counterActive()){
+        document.getElementById('currentpomodoro').hidden = true;
+    } else {
+        document.getElementById('currentpomodoro').hidden = false;
+    }
 }
 
 function displayClock(){
@@ -102,5 +103,5 @@ function counterActive(){
     if(cookieSet("pomodoro_counter_active")){
         return getCookie("pomodoro_counter_active") == "true";
     }
-    return true; 
+    return false; 
 }

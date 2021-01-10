@@ -1,32 +1,39 @@
-function loadPage(){ 
+var pom_minutes = 25;
+var pom_seconds = 0; 
 
+
+function loadPage(){
 
     var controls = document.getElementsByClassName("controls")[0];
 
-     var resetPomodoroCountButton = document.createElement("button"); 
+
+
+     var resetPomodoroCountButton = document.getElementById("resetPomButton"); 
      resetPomodoroCountButton.innerHTML = "Reset pomodoro count"; 
-     controls.appendChild(resetPomodoroCountButton); 
 
      resetPomodoroCountButton.addEventListener("click", function() { 
              setPomodoroCount(0); 
      })
 
 
-     var startPomodoroButton = document.createElement("button"); 
+     var startPomodoroButton = document.getElementById("startPomButton"); 
      startPomodoroButton.innerHTML = "Start pomodoro"; 
-     controls.appendChild(startPomodoroButton); 
 
      startPomodoroButton.addEventListener("click", function() { 
              startPomodoro(); 
      })
 
-     var toggleCounterButton = document.createElement("button"); 
+     var toggleCounterButton = document.getElementById("deactivateCounterButton"); 
      toggleCounterButton.id = "togglebutton"; 
      toggleCounterButton.innerHTML = getToggleCounterText(); 
-     controls.appendChild(toggleCounterButton); 
 
      toggleCounterButton.addEventListener("click", function() { 
              toggleCounter();  
+     })
+
+     var setPomodoroLengthButton = document.getElementById("updatePomLengthButton");
+     setPomodoroLengthButton.addEventListener("click", function() {
+         setPomodoroLength();
      })
 }
 
@@ -72,7 +79,7 @@ function setCounterActive(active){
 
 function startPomodoro(){
     var now = new Date().getTime(); 
-    var pomodoroEnd = new Date(now+(25*60*1000));
+    var pomodoroEnd = new Date(now+(pom_minutes*60*1000 + pom_seconds*1000));
     setPomodoroEnd(pomodoroEnd);
     setCurrentPomdoroCounted(false);  
 }
@@ -98,5 +105,18 @@ function toggleCounter(){
     } else {
         setCounterActive("true"); 
         document.getElementById("togglebutton").innerHTML = getToggleCounterText(); 
+    }
+}
+
+function setPomodoroLength(){
+    var minutesEntry = document.getElementById("minutesEntry").value; 
+    var secondsEntry = document.getElementById("secondsEntry").value; 
+    pom_minutes = parseInt(minutesEntry); 
+    pom_seconds = parseInt(secondsEntry); 
+    if(isNaN(pom_seconds)){
+        pom_seconds = 0;
+    }
+    if(isNaN(pom_minutes)){
+        pom_minutes
     }
 }
