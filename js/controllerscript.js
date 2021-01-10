@@ -87,7 +87,6 @@ function startPomodoro(){
     var pomodoroEnd = new Date(now+(pom_minutes*60*1000 + pom_seconds*1000));
     setPomodoroEnd(pomodoroEnd);
     setCurrentPomdoroCounted(false);
-    setCounterActive(); 
 }
 
 function counterActive(){
